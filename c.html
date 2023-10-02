@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./c.css">
+    <link rel="stylesheet" href="./output.css">
+    <title>Challenge</title>
+</head>
+<body>
+
+   <div id="main">
+        <header id="head" class="flex justify-between items-center p-6">
+        <h1 class="text-4xl md:text-5xl lg:text-5xl">تحديات  كرة القدم</h1>
+
+        <div id="menu" class=" cursor-pointer w-11 h-11 md:w-12 md:h-12  border-2 border-blue-500 rounded-md flex justify-around items-center flex-col">
+            <span class="w-1/2  bg-slate-500"></span>
+            <span class="w-1/2  bg-slate-500"></span>
+            <span class="w-1/2  bg-slate-500"></span>
+        </div>
+        </header>
+
+        <div id="home" class="w-full">
+        <h1 class="text-center text-4xl md:text-5xl lg:text-5xl">تحديات في معلومات كرة</h1>
+        <h1 class="text-center text-4xl md:text-5xl lg:text-5xl">القدم العالمية و المحلية</h1>
+        </div>
+
+
+        <div id="nav" class="w-full p-2 md:p-3 lg:p-3">
+        <div id="links" class="w-full flex flex-col text-center justify-between items-center mt-3">
+            <a href="#" id="t" class=" cursor-pointer text-5xl md:text-6xl lg:text-6xl">تمثيل</a>
+            <a href="#" id="f" class=" cursor-pointer text-5xl md:text-6xl lg:text-6xl">5 * 10</a>
+            <a href="#" id="n" class=" cursor-pointer text-5xl md:text-6xl lg:text-6xl">انتقالات</a>
+        </div>
+        <div id="exitMenu" class=" cursor-pointer absolute text-green-400 top-0 right-0 w-7 h-7 md:w-9 md:h-9 lg:w-9 lg:h-9 md:text-3xl lg:text-3xl text-center flex justify-center items-center">X</div>    
+        </div>
+        
+        <div id="container">
+
+            <div id="who" class="w-full h-screen absolute top-0">
+                <div id="names" class="w-full flex justify-center items-center">
+                    <h1 id="WhoNames" class="flex justify-center items-center text-center text-3xl md:text-4xl lg:text-4xl mt-3 w-72 md:w-80 lg:w-96 h-12"></h1>
+                </div>
+                <div id="MainImg" class="w-full">
+                    <img id="WhoMain" src="" class=" hidden m-auto mt-1 w-72 h-48 md:w-80 md:h-56 lg:w-96 lg:h-60">
+                </div>
+                <div id="WhoBtns" class="w-full flex justify-around items-center m-auto mt-4 text-3xl md:text-4xl lg:text-4xl">
+                    <button id="showE" class="border-2 border-white w-44 md:w-48 lg:w-56 p-1 rounded-md">لاعب اوروبي</button>
+                    <button id="showM" class="border-2 border-white w-44 md:w-48 lg:w-56 p-1 rounded-md">لاعب محلي</button>
+                </div>
+                <div id="WhoST" class="w-full flex justify-around items-center m-auto mt-9 text-3xl md:text-4xl lg:text-4xl">
+                    <button id="WhoTimer" class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full border-2 border-white p-1">ابدا</button>
+                    <button id="WhoStop" class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full border-2 border-white p-1">توقف</button>
+                </div>
+                <audio controls src="./old-alarm-sound_gdMsEsXK.mp3" class="hidden" preload="metadata" id="WhoAudio"></audio>
+                <div id="exitWho" class=" cursor-pointer absolute bg-slate-50 top-0 right-0 w-7 h-7 md:w-9 md:h-9 lg:w-9 lg:h-9 md:text-3xl lg:text-3xl text-center flex justify-center items-center">X</div>
+            </div>
+
+            <div id="five" class="w-full h-screen absolute top-0">
+                <div id="chart" class="w-full">
+                    <h1 id="board" class=" m-auto w-72 h-32 md:w-80 md:h-36 lg:w-96 lg:h-40 p-2 rounded-md bg-slate-50 mt-12 text-right text-3xl md:text-4xl lg:text-4xl"></h1>
+                </div>
+                <div id="quest" class="w-full flex">
+                    <button id="showQ" class="m-auto mt-10 w-48 md:w-52 lg:w-56 p-2 border-2 border-white rounded-md text-3xl md:text-4xl lg:text-4xl">اعرض السؤال</button>
+                </div>
+                <div id="FBtns" class="w-full flex justify-around items-center m-auto mt-9 text-3xl md:text-4xl lg:text-4xl">
+                    <button id="fTimer" class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full border-2 border-white p-1">ابدا</button>
+                    <button id="fStop" class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full border-2 border-white p-1">توقف</button>
+                </div>
+                <div id="exitFive" class=" cursor-pointer absolute bg-slate-50 top-0 right-0 w-7 h-7 md:w-9 md:h-9 lg:w-9 lg:h-9 md:text-3xl lg:text-3xl text-center flex justify-center items-center">X</div>
+            </div>
+
+
+            <div id="tra" class="w-full h-screen absolute top-0">
+                <div id="area" class="flex mt-10">
+                    <h1 id="showP" class=" bg-yellow-50 overflow-scroll w-80 h-40 md:w-96 md:h-44 lg:w-1/2 lg:h-48 p-2 rounded-md outline-none text-right text-3xl md:text-4xl lg:text-4xl m-auto"></h1>
+                </div>
+                <div id="showNext" class="flex w-full">
+                    <button id="Next" class="m-auto mt-10 w-48 md:w-52 lg:w-56 p-2 border-2 border-white rounded-md text-3xl md:text-4xl lg:text-4xl">اعرض اللاعب</button>
+                </div>
+                <div id="player" class="w-full flex">
+                    <button id="showPlayer" class="m-auto flex justify-center items-center mt-11 w-48 md:w-52 lg:w-56 p-2 border-2 border-white rounded-md text-3xl md:text-4xl lg:text-4xl">اسم اللاعب <i id="pArrow" class="fa-solid fa-angle-down"></i></button>
+                </div>
+                <div id="pName" class="flex">
+                    <h1 id="playerName" class=" m-auto flex justify-center rounded-md items-center text-center text-3xl md:text-4xl lg:text-4xl mt-3 w-72 md:w-80 lg:w-96 h-12"></h1>
+                </div>
+                <div id="exitTra" class=" cursor-pointer absolute bg-slate-50 top-0 right-0 w-7 h-7 md:w-9 md:h-9 lg:w-9 lg:h-9 md:text-3xl lg:text-3xl text-center flex justify-center items-center">X</div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+<script src="./photos.js"></script>    
+<script src="./PhotosE.js"></script>    
+<script src="./questions.js"></script>    
+<script src="./Transfer.js"></script>    
+<script src="./c.js"></script>    
+<script src="https://kit.fontawesome.com/41a38439e1.js" crossorigin="anonymous"></script>
+</body>
+</html>

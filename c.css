@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Barriecito&family=Creepster&family=Fredericka+the+Great&family=Lalezar&family=Lilita+One&display=swap');
+
+body{
+    background-image: url(./background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Lalezar', cursive;
+    overflow: hidden;
+}
+#head h1{
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,cyan,#075e54);
+    background-clip: text;
+}
+#menu span{
+    height: 2px;
+}
+#menu.active{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s linear;
+}
+#home{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+#home h1{
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,#ffd700,#00ff00);
+    background-clip: text;
+    margin: 60px;
+}
+#nav{
+    background: red;
+    position: absolute;
+    right:0;
+    top:0px;
+    height:100vh;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background: transparent;
+    box-shadow: 0 0 5px white;
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    pointer-events: none;
+}
+#nav.active{
+    opacity: 1;
+    transition: 0.5s linear;
+    pointer-events: auto;
+}
+#links a{
+    margin: 25px;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,#fff8dc,#fdf5e6);
+    background-clip: text;
+}
+#exitMenu{
+    background: rgba(255,255,255,0.3);
+    border-bottom-left-radius: 5px;
+    z-index: 100;
+    pointer-events: auto;
+}
+#who{
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.4s linear;
+    background: linear-gradient(to right top,#000000,#2c3e50);
+}
+#who.active{
+    transform: translateX(0);
+    transition: transform 0.4s linear;
+}
+#WhoMain.active{
+    display: block;
+}
+.none{
+    pointer-events: none;
+}
+#WhoNames,#showE,#showM,#WhoStop,#WhoTimer{
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,#d0e1d4,#d7d3b7);
+    background-clip: text;
+    outline: none;
+}
+#five{
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.4s linear;
+    background: linear-gradient(to right top,#000000,#2c3e50);
+}
+#fTimer,#fStop,#showQ{
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,#d0e1d4,#d7d3b7);
+    background-clip: text;
+    outline: none;
+}
+#five.active{
+    transform: translateX(0);
+    transition: transform 0.4s linear;
+}
+#tra{
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.4s linear;
+    background: linear-gradient(to right top,#000000,#2c3e50);
+}
+#tra.active{
+    transform: translateX(0);
+    transition: transform 0.4s linear;
+}
+#Next,#pArrow,#showPlayer,#playerName{
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,#d0e1d4,#d7d3b7);
+    background-clip: text;
+    outline: none;
+}
+#pArrow.active{
+    transform: rotate(180deg);
+}
+#playerName{
+    display: none;
+}
+#playerName.active{
+    display: block;
+}
+#showP{
+    font-family: impact;
+}
+#showP::-webkit-scrollbar{
+    width: 6px;
+}
+#showP::-webkit-scrollbar-track{
+    display: none;
+}
+#showP::-webkit-scrollbar-thumb{
+    background: silver;
+    border-radius: 8px;
+    cursor: pointer;
+}

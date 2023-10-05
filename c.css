@@ -148,3 +148,73 @@ body{
     border-radius: 8px;
     cursor: pointer;
 }
+
+#passBoard::-webkit-scrollbar{
+    width: 6px;
+    border-radius: 8px;
+}
+#passBoard::-webkit-scrollbar-track{
+    display: none;
+    border-radius: 8px;
+}
+#passBoard::-webkit-scrollbar-thumb{
+    background: silver;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#pass{
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.4s linear;
+    background: linear-gradient(to right top,#000000,#2c3e50);
+}
+#pass.active{
+    transform: translateX(-0);
+    transition: transform 0.4s linear;
+}
+#passName{
+    opacity: 0;
+}
+#passName.active{
+    opacity:1 ;
+}
+#hintPara{
+    margin: 25px;
+}
+#passName,#passShow,#passNextP,#passClue,#passArrow{
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,#d0e1d4,#d7d3b7);
+    background-clip: text;
+    outline: none;
+}
+#teams{
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.4s linear;
+    background: linear-gradient(to right top,#000000,#2c3e50);
+}
+#teams.active{
+    transform: translateX(0);
+}
+#nameTeam{
+    opacity: 0;
+}
+#nameTeam.active{
+    opacity: 1;
+}
+#teamsArrow.active{
+    transform: rotate(180deg);
+}
+#teamShow,#nTeamShow,#teamName,#nameTeam,#teamsArrow{
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,#d0e1d4,#d7d3b7);
+    background-clip: text;
+    outline: none;
+}
+#tImg{
+    transition: 0.3s linear;
+}
+#tImg.active{
+    display: block;
+}
+

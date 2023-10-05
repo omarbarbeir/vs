@@ -185,3 +185,128 @@ function Transfer(){
     }
 }
 Transfer()
+
+let currentPlayerIndex=0;
+let hintIndex=0;
+
+
+function showHints() {
+    let hints = Object.entries(passE[currentPlayerIndex].hints);
+    let para = document.createElement("p");
+    para.setAttribute("id","hintPara")
+    if(hintIndex < hints.length){
+        let [hintKey , hintValue] = hints[hintIndex];
+        para.textContent = `${hintValue}`;
+        hintIndex++;
+
+        if(hintIndex === hints.length){
+            passClue.classList.add("none");
+            passClue.innerHTML = "لا يوجد أي كلو"
+        }
+
+    }
+    passBoard.appendChild(para)
+}
+
+function showNextPlayer() {
+    hintIndex = 0;
+    currentPlayerIndex = Math.floor(Math.random() * passE.length);
+    let currentPlayer = passE[currentPlayerIndex];
+    passShow.onclick=()=>{
+        passName.textContent = `${currentPlayer.player}`;
+        passName.classList.toggle("active");
+        passArrow.classList.toggle("active");
+        
+    }
+    passNextP.onclick=()=>{
+        passBoard.textContent = "";
+        passName.innerText = "";
+        passClue.classList.remove("none");
+        passClue.innerHTML = "اعرض الكلو"
+        passName.classList.remove("active");
+        passArrow.classList.remove("active")
+    }
+}
+
+
+passClue.addEventListener("click",showHints);
+passNextP.addEventListener("click",showNextPlayer);
+showNextPlayer()
+
+
+let teamImg = document.getElementById("tImg");
+let teamNext = document.getElementById("teamNext");
+let teamName = document.getElementById("teamName");
+let nameTeam = document.getElementById("nameTeam");
+let teamsArrow = document.getElementById("teamsArrow");
+let nTeamShow = document.getElementById("nTeamShow");
+let teamShow = document.getElementById("teamShow");
+let g = document.getElementById("g");
+let exitteam = document.getElementById("exitteam");
+let tteams = document.getElementById("teams");
+
+g.onclick=()=>{
+    tteams.classList.add("active")
+}
+exitteam.onclick=()=>{
+    tteams.classList.remove("active")
+}
+
+
+function Teame(){
+    teamShow.onclick=()=>{
+        let {team,img} = teams[Math.floor(Math.random() * teams.length)];
+        console.log(team,img);
+        teamImg.src= img;
+        nameTeam.classList.remove("active")
+        teamsArrow.classList.remove("active")
+        teamImg.classList.add("active")
+
+        teamName.onclick=()=>{
+            document.querySelector("#nameTeam").innerHTML = team;
+            nameTeam.classList.toggle("active")
+            teamsArrow.classList.toggle("active")
+        }
+    }
+
+    nTeamShow.onclick=()=>{
+        let {nTeam,nImg} = nTeams[Math.floor(Math.random() * nTeams.length)];
+        console.log(nTeam,nImg);
+        teamImg.src =nImg;
+        nameTeam.classList.remove("active")
+        teamsArrow.classList.remove("active")
+        teamImg.classList.add("active")
+
+        teamName.onclick=()=>{
+            document.querySelector("#nameTeam").innerHTML = nTeam;
+            nameTeam.classList.toggle("active")
+            teamsArrow.classList.toggle("active")
+        }
+    }
+    
+
+    
+}
+Teame()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
